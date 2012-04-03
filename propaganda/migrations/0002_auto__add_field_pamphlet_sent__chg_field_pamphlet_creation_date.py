@@ -14,15 +14,15 @@ class Migration(SchemaMigration):
                       keep_default=False)
 
 
-        # Changing field 'Pamphlet.creation_date'
-        db.alter_column('propaganda_pamphlet', 'creation_date', self.gf('django.db.models.fields.DateField')())
+        # Changing field 'Pamphlet.delivery_date'
+        db.alter_column('propaganda_pamphlet', 'delivery_date', self.gf('django.db.models.fields.DateField')())
     def backwards(self, orm):
         # Deleting field 'Pamphlet.sent'
         db.delete_column('propaganda_pamphlet', 'sent')
 
 
-        # Changing field 'Pamphlet.creation_date'
-        db.alter_column('propaganda_pamphlet', 'creation_date', self.gf('django.db.models.fields.DateField')(auto_now_add=True))
+        # Changing field 'Pamphlet.delivery_date'
+        db.alter_column('propaganda_pamphlet', 'delivery_date', self.gf('django.db.models.fields.DateField')(auto_now_add=True))
     models = {
         'propaganda.subscriber': {
             'Meta': {'object_name': 'Subscriber'},
@@ -31,9 +31,9 @@ class Migration(SchemaMigration):
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'})
         },
         'propaganda.pamphlet': {
-            'Meta': {'unique_together': "(('subscriber', 'propaganda', 'creation_date'),)", 'object_name': 'Pamphlet'},
+            'Meta': {'unique_together': "(('subscriber', 'propaganda', 'delivery_date'),)", 'object_name': 'Pamphlet'},
             'subscriber': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['propaganda.Subscriber']"}),
-            'creation_date': ('django.db.models.fields.DateField', [], {}),
+            'delivery_date': ('django.db.models.fields.DateField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'propaganda': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['propaganda.Propaganda']"}),
             'sent': ('django.db.models.fields.BooleanField', [], {'default': 'False'})

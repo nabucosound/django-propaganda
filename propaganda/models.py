@@ -24,18 +24,18 @@ class Subscriber(models.Model):
 class Pamphlet(models.Model):
     """
     Email assigned to a subscriber to be sent.
-    The ``creation_date``, combined on the ``unique_together``, restricts the
+    The ``delivery_date``, combined on the ``unique_together``, restricts the
     creation of only one Pamphlet assigned to a user per day.
     """
     propaganda = models.ForeignKey(Propaganda)
     subscriber = models.ForeignKey(Subscriber)
-    creation_date = models.DateField()
+    delivery_date = models.DateField()
     sent = models.BooleanField(default=False)
 
     class Meta:
         # This makes sure we will not send the same email
         # more than one time per day to our subcribers
-        unique_together = ('subscriber', 'propaganda', 'creation_date')
+        unique_together = ('subscriber', 'propaganda', 'delivery_date')
 
     def __unicode__(self):
         return u"%s - %s" % (self.subscriber, self.propaganda.subject)

@@ -31,18 +31,18 @@ class Migration(SchemaMigration):
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('subscriber', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['propaganda.Subscriber'])),
             ('propaganda', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['propaganda.Propaganda'])),
-            ('creation_date', self.gf('django.db.models.fields.DateField')(auto_now_add=True, blank=True)),
+            ('delivery_date', self.gf('django.db.models.fields.DateField')(auto_now_add=True, blank=True)),
         ))
         db.send_create_signal('propaganda', ['Pamphlet'])
 
-        # Adding unique constraint on 'Pamphlet', fields ['subscriber', 'propaganda', 'creation_date']
-        db.create_unique('propaganda_pamphlet', ['subscriber_id', 'propaganda_id', 'creation_date'])
+        # Adding unique constraint on 'Pamphlet', fields ['subscriber', 'propaganda', 'delivery_date']
+        db.create_unique('propaganda_pamphlet', ['subscriber_id', 'propaganda_id', 'delivery_date'])
 
 
     def backwards(self, orm):
         
-        # Removing unique constraint on 'Pamphlet', fields ['subscriber', 'propaganda', 'creation_date']
-        db.delete_unique('propaganda_pamphlet', ['subscriber_id', 'propaganda_id', 'creation_date'])
+        # Removing unique constraint on 'Pamphlet', fields ['subscriber', 'propaganda', 'delivery_date']
+        db.delete_unique('propaganda_pamphlet', ['subscriber_id', 'propaganda_id', 'delivery_date'])
 
         # Deleting model 'Propaganda'
         db.delete_table('propaganda_propaganda')
@@ -62,9 +62,9 @@ class Migration(SchemaMigration):
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'})
         },
         'propaganda.pamphlet': {
-            'Meta': {'unique_together': "(('subscriber', 'propaganda', 'creation_date'),)", 'object_name': 'Pamphlet'},
+            'Meta': {'unique_together': "(('subscriber', 'propaganda', 'delivery_date'),)", 'object_name': 'Pamphlet'},
             'subscriber': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['propaganda.Subscriber']"}),
-            'creation_date': ('django.db.models.fields.DateField', [], {'auto_now_add': 'True', 'blank': 'True'}),
+            'delivery_date': ('django.db.models.fields.DateField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'propaganda': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['propaganda.Propaganda']"})
         },

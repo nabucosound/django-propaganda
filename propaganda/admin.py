@@ -11,8 +11,8 @@ class SubscriberAdmin(admin.ModelAdmin):
 
 
 class PamphletAdmin(admin.ModelAdmin):
-    list_display = ('subscriber', 'propaganda', 'creation_date', 'sent')
-    list_filter = ('creation_date', 'sent')
+    list_display = ('subscriber', 'propaganda', 'delivery_date', 'sent')
+    list_filter = ('delivery_date', 'sent')
 
 
 admin.site.register(Propaganda, PropagandaAdmin)
