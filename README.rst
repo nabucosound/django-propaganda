@@ -8,8 +8,8 @@ propaganda pamphlets right into their inboxes. Keep them updated with the Truth!
 
 This simple Django application is made to be used for trivial newsletter
 (**pamphlets**) deliveries with your information (**propaganda**), where you
-supply the raw content (both plain text and HTML versions). Subscribers
-(**subscribers**) will receive the emails.
+supply the raw content (both plain text and HTML versions) to be delivered.
+Subscribers (**subscribers**) will then receive the emails you send.
 
 Installation
 ============
