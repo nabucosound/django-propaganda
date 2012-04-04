@@ -8,6 +8,8 @@ class PropagandaAdmin(admin.ModelAdmin):
 
 class SubscriberAdmin(admin.ModelAdmin):
     list_display = ('email', 'active')
+    list_filter = ('active',)
+    search_fields = ('email',)
 
 
 class PamphletAdmin(admin.ModelAdmin):
