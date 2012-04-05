@@ -25,7 +25,8 @@ Installation
 
     python manage.py migrate propaganda
 
-#. Otherwise, update your database the Django standard way::
+#. Otherwise, update your database the Django standard way (the good old
+   ``syncdb```)::
 
     python manage.py syncdb
 
