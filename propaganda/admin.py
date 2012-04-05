@@ -3,12 +3,18 @@ from propaganda.models import Propaganda, Subscriber, Pamphlet
 
 
 class PropagandaAdmin(admin.ModelAdmin):
-    list_display = ('subject', 'from_header')
+    list_display = ('subject', 'from_header', 'current')
+    search_fields = ('subject', 'plaintext_msg', 'html_msg',)
+    list_filter = ('from_header',)
+    ordering = ('-id',)
+
+    def current(self, obj):
+        return obj == Propaganda.objects.latest('id')
 
 
 class SubscriberAdmin(admin.ModelAdmin):
-    list_display = ('email', 'active')
-    list_filter = ('active',)
+    list_display = ('email', 'active', 'test_user')
+    list_filter = ('active', 'test_user')
     search_fields = ('email',)
 
 

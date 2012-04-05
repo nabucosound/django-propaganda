@@ -21,6 +21,7 @@ class Subscriber(models.Model):
     """A subscriber of your emails"""
     email = models.EmailField(_("email"), unique=True)
     active = models.BooleanField(_("active user"), default=True)
+    test_user = models.BooleanField(_("test user"), default=False)
 
     def __unicode__(self):
         return self.email
