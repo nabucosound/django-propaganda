@@ -16,16 +16,16 @@ Installation
 
 #. Install the latest version::
 
-   pìp install -e git+git://github.com/nabucosound/django-propaganda#egg=django-propaganda
+    pip install django-propaganda
 
 #. Add ``propaganda`` to your ``INSTALLED_APPS`` setting.
 
 #. If you use South for migration management (you should!) just run the
    migrations::
 
-        python manage.py migrate propaganda
+    python manage.py migrate propaganda
 
-   Otherwise, update your database the Django standard way::
+#. Otherwise, update your database the Django standard way::
 
-        python manage.py syncdb
+    python manage.py syncdb
 
