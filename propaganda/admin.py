@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.translation import ugettext as _
 from propaganda.models import Propaganda, Subscriber, Pamphlet
 
 
@@ -10,6 +11,8 @@ class PropagandaAdmin(admin.ModelAdmin):
 
     def current(self, obj):
         return obj == Propaganda.objects.latest('id')
+    current.short_description = _("current")
+    current.boolean = True
 
 
 class SubscriberAdmin(admin.ModelAdmin):
