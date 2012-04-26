@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: django-propaganda\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-26 17:57-0300\n"
+"PO-Revision-Date: 2012-04-26 18:02-0300\n"
+"Last-Translator: Hector Garcia <hector@nomadblue.com>\n"
+"Language-Team: Nomadblue <hector@nomadblue.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Language: Catalan\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: admin.py:14
+msgid "current"
+msgstr "vigent"
+
+#: models.py:7
+msgid "plain text message"
+msgstr "missatge en texte pla"
+
+#: models.py:8
+msgid "html message"
+msgstr "missatge en html"
+
+#: models.py:9
+msgid "subject"
+msgstr "assumpte"
+
+#: models.py:10
+msgid "sender name"
+msgstr "nom de qui envia"
+
+#: models.py:16
+#: models.py:40
+msgid "propaganda"
+msgstr "propaganda"
+
+#: models.py:17
+msgid "propagandas"
+msgstr "propagandes"
+
+#: models.py:22
+msgid "email"
+msgstr "email"
+
+#: models.py:23
+msgid "active user"
+msgstr "usuari actiu"
+
+#: models.py:24
+msgid "test user"
+msgstr "usuari de proves"
+
+#: models.py:30
+#: models.py:41
+msgid "subscriber"
+msgstr "subscriptor"
+
+#: models.py:31
+msgid "subscribers"
+msgstr "subscriptors"
+
+#: models.py:42
+msgid "delivery date"
+msgstr "data d'enviament"
+
+#: models.py:43
+msgid "sent pamphlet"
+msgstr "pamflet enviat"
+
+#: models.py:49
+msgid "pamphlet"
+msgstr "pamflet"
+
+#: models.py:50
+msgid "pamphlets"
+msgstr "pamflets"
+
