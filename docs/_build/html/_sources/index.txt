@@ -11,11 +11,10 @@ This simple Django application is made to be used for trivial newsletter
 supply the raw content (both plain text and HTML versions) to be delivered.
 Subscribers (**subscribers**) will then receive the emails you send.
 
-Documentation
-=============
+Contents:
 
-Read the latest documentation on the fine `Read the docs`_ project for
-installation, configuration and customization instructions, and also to read
-examples and tutorials about how to use the package in different scenarios.
+.. toctree::
+   :maxdepth: 2
 
-.. _`Read the docs`: http://readthedocs.org/docs/django-propaganda/en/latest/
+   installation
+
