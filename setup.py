@@ -32,7 +32,7 @@ setup(
     name='django-propaganda',
     version=version,
     url='http://github.com/nabucosound/django-propaganda',
-    download_url="https://github.com/nabucosound/django-propaganda/zipball/v1.0.1",
+    download_url="https://github.com/nabucosound/django-propaganda/zipball/v%s" % version,
     author='Hector Garcia',
     author_email='hector@nomadblue.com',
     description='Django app to manage your daily newsletter delivery.',
