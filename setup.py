@@ -1,7 +1,7 @@
 import os
 from distutils.core import setup
 
-package_dirs = ('base_accounts',)
+package_dirs = ('propaganda',)
 
 
 def fullsplit(path, result=None):
@@ -43,7 +43,7 @@ setup(
     url='https://github.com/nabucosound/django-propaganda',
     download_url="https://github.com/nabucosound/django-propaganda/archive/v%s.zip" % version_num,
     packages=packages,
-    package_data={'base_accounts': ['templates/base_accounts/*']},  # Include templates and statics here
+    package_data={'propaganda': []},  # Include templates and statics here
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
