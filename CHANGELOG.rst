@@ -2,6 +2,11 @@
 CHANGELOG
 =========
 
+Version 1.1.4
+=============
+
+* Revamp migrations to Django 1.7 format
+
 Version 1.1.3
 =============
 
