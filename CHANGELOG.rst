@@ -2,6 +2,11 @@
 CHANGELOG
 =========
 
+Version 1.1.5
+=============
+
+* Add new migration for Django 1.8 (EmailField max_legth)
+
 Version 1.1.4
 =============
 
